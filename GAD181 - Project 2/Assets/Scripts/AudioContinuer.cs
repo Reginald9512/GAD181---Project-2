@@ -9,7 +9,7 @@ public class AudioContinuer : MonoBehaviour
 
     private void Awake()
     {
-        GameObject[] musicObj = GameObject.FindGameObjectsWithTag("ButtonSFX");
+        GameObject[] musicObj = GameObject.FindGameObjectsWithTag("MenuMusic");
 
         if (musicObj.Length > 1)
         {
