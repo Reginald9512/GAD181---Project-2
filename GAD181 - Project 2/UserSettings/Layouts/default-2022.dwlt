@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 39
+  controlID: 89
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -346,23 +346,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/UI/Images
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/UI/Images
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Nick\Documents\GitHub\GAD181---Project-2\GAD181 - Project
     2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3e590000
-    m_LastClickedID: 22846
-    m_ExpandedIDs: 000000003e5900004859000034660000486600005e6600006066000064660000686600007866000084660000a6660000be660000d8660000e6660000ea6600005267000070670000726700007467000082670000e66e000000ca9a3b
+    scrollPos: {x: 0, y: 32}
+    m_SelectedIDs: 625b0000
+    m_LastClickedID: 23394
+    m_ExpandedIDs: 00000000085a00000a5a00000c5a00000e5a0000105a0000125a0000145a0000165a0000185a00001a5a00001c5a00001e5a0000205a0000225a0000245a0000265a0000285a00002a5a00002c5a00002e5a0000365a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -390,7 +390,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000
+    m_ExpandedIDs: 00000000085a00000a5a00000c5a00000e5a0000105a0000125a0000145a0000165a0000185a00001a5a00001c5a00001e5a0000205a0000225a0000245a0000265a0000285a00002a5a00002c5a00002e5a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -520,7 +520,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 64a4fbffb4a4fbff10adfbff9cb8fbff8cbafbff5abcfbff2ac2fbff08c4fbffb2c4fbffb4c5fbff66e8fbfff4f6fbffbc07fcffea1dfcfff821fcff7c25fcff648dfeffbe8dfefffe0dffffe00fffff4e19ffff4429ffff4629ffff9429ffff322affff8e2affff2634ffff8e40ffff3046ffff2c5effff16c0ffff96d0ffff80e3ffff9ef8ffffeef8ffff34fbfffff4ffffffc46e0000fe7100002e7200004072000058720000627200003c740000fa8600009a880000928900008c8a0000b69200006695000086a90000b6b3000082b4000018ba00008abf0000
+      m_ExpandedIDs: 34fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -802,9 +802,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 842.0058, y: 611.6345, z: 20.223423}
+    m_Target: {x: 918.61237, y: 525.0975, z: 20.373936}
     speed: 2
-    m_Value: {x: 842.0058, y: 611.6345, z: 20.223423}
+    m_Value: {x: 918.61237, y: 525.0975, z: 20.373936}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
