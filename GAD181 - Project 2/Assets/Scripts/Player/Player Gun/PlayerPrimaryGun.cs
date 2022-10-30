@@ -5,6 +5,10 @@ using TMPro;
 
 public class PlayerPrimaryGun : MonoBehaviour
 {
+    public AudioClip reloadSound;
+    public AudioClip gunFire;
+    public AudioSource gunSounds;
+
     //weapon stats
     public int weaponDamage, magazineCapacity, bulletsPerPress;
     public float range, spread, reloadTime, timeBetweenShooting, timeBetweenBurst;
@@ -38,16 +42,28 @@ public class PlayerPrimaryGun : MonoBehaviour
 
     private void MyInput()
     {
-        if (allowButtonHold) shooting = Input.GetButtonDown("Fire1");
-        else shooting = Input.GetButtonDown("Fire1");
+        if (allowButtonHold)
+        {
+            shooting = Input.GetButtonDown("Fire1");
+        }
+        else
+        {
+            shooting = Input.GetButtonDown("Fire1");
+        }
 
-        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineCapacity && !reloading) Reload();
+        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineCapacity && !reloading)
+        {
+            Reload();
+
+            gunSounds.PlayOneShot(reloadSound);
+        }
 
         //shoot
         if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
         {
             bulletsShot = bulletsPerPress;
             Shoot();
+            gunSounds.PlayOneShot(gunFire);
         }
     }
 

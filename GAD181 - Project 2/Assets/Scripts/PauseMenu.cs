@@ -38,6 +38,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
 
         GetComponent<PlayerController>().enabled = false;
+        GetComponentInChildren<PlayerPrimaryGun>().enabled = false;
     }
 
     public void Resume()
@@ -52,6 +53,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         GetComponent<PlayerController>().enabled = true;
+        GetComponentInChildren<PlayerPrimaryGun>().enabled = true;
     }
 
     public void Instructions(int sceneID)
@@ -71,5 +73,10 @@ public class PauseMenu : MonoBehaviour
     public void OpenControls()
     {
         controlsPanel.SetActive(true);
+    }
+
+    public void CloseControls()
+    {
+        controlsPanel.SetActive(false);
     }
 }
