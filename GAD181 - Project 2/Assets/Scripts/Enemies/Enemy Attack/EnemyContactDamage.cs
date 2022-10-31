@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyContactDamage : MonoBehaviour
 {
-    public int collisionDamage = 15;
+    public int collisionDamage = 20;
 
     private void OnCollisionEnter(Collision collision)
     {

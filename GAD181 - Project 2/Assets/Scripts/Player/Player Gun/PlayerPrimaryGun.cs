@@ -26,6 +26,7 @@ public class PlayerPrimaryGun : MonoBehaviour
 
     //graphics
     public TextMeshProUGUI ammunitionCounter;
+    public AudioSource GunSFX;
     //public GameObject muzzleFlash, bulletHoleGraphic;
 
     private void Awake()
@@ -63,7 +64,12 @@ public class PlayerPrimaryGun : MonoBehaviour
         {
             bulletsShot = bulletsPerPress;
             Shoot();
+<<<<<<< Updated upstream
             gunSounds.PlayOneShot(gunFire);
+=======
+
+            GunShotSFX();
+>>>>>>> Stashed changes
         }
     }
 
@@ -109,5 +115,10 @@ public class PlayerPrimaryGun : MonoBehaviour
     {
         bulletsLeft = magazineCapacity;
         reloading = false;
+    }
+
+    private void GunShotSFX()
+    {
+        GunSFX.Play();
     }
 }

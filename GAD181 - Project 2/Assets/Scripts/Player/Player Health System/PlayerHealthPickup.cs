@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHealthPickup : MonoBehaviour
 {
-    public int healthIncrease = 40;
+    public int healthIncrease = 5;
     //public delegate void PlayerHealthIncreaseAction();
     //public static event PlayerHealthIncreaseAction PlayerHealthIncrease;
 
