@@ -24,10 +24,7 @@ public class PlayerPrimaryGun : MonoBehaviour
     public RaycastHit rayHit;
     public LayerMask isEnemy;
 
-    //graphics
     public TextMeshProUGUI ammunitionCounter;
-    public AudioSource GunSFX;
-    //public GameObject muzzleFlash, bulletHoleGraphic;
 
     private void Awake()
     {
@@ -59,15 +56,13 @@ public class PlayerPrimaryGun : MonoBehaviour
             gunSounds.PlayOneShot(reloadSound);
         }
 
-        //shoot
+        //Shoot
         if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
         {
             bulletsShot = bulletsPerPress;
             Shoot();
 
             gunSounds.PlayOneShot(gunFire);
-
-            GunShotSFX();
         }
     }
 
@@ -113,10 +108,5 @@ public class PlayerPrimaryGun : MonoBehaviour
     {
         bulletsLeft = magazineCapacity;
         reloading = false;
-    }
-
-    private void GunShotSFX()
-    {
-        GunSFX.Play();
     }
 }
