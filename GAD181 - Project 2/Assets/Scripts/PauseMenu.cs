@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject controlsPanel;
+    public GameObject upgradesPanel;
 
     private void Update()
     {
@@ -26,6 +27,21 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Upgrade"))
+        {
+            upgradesPanel.SetActive(true);
+
+            GetComponent<PlayerController>().enabled = false;
+            GetComponent<PauseMenu>().enabled = false;
+            GetComponentInChildren<PlayerPrimaryGun>().enabled = false;
+
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+        }
+    }
+
     void Pause()
     {
         pauseMenu.SetActive(true);
@@ -35,7 +51,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
 
         Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Confined;
 
         GetComponent<PlayerController>().enabled = false;
         GetComponentInChildren<PlayerPrimaryGun>().enabled = false;
@@ -78,5 +94,17 @@ public class PauseMenu : MonoBehaviour
     public void CloseControls()
     {
         controlsPanel.SetActive(false);
+    }
+
+    public void CloseUpgrades()
+    {
+        upgradesPanel.SetActive(false);
+
+        GetComponent<PlayerController>().enabled = true;
+        GetComponent<PauseMenu>().enabled = true;
+        GetComponentInChildren<PlayerPrimaryGun>().enabled = true;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
