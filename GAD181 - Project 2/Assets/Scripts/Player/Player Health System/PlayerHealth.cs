@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
 {
     public int playerHealth;
     private int playerHealthMax = 100;
+
+    public GameObject gameOver;
     
     public int healthIndicator;
     [SerializeField] private TextMeshProUGUI totalPlayerhealth;
@@ -25,7 +27,16 @@ public class PlayerHealth : MonoBehaviour
         
         if (playerHealth <= 0)
         {
-            Destroy(gameObject);
+            playerHealth = 0;
+            
+            gameOver.SetActive(true);
+
+            GetComponent<PlayerController>().enabled = false;
+            GetComponent<PauseMenu>().enabled = false;
+            GetComponentInChildren<PlayerPrimaryGun>().enabled = false;
+
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
         }
 
         totalPlayerhealth.text = playerHealth.ToString();

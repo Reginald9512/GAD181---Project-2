@@ -8,7 +8,7 @@ public class GeneratorManager : MonoBehaviour
     public GameObject gameOver;
 
     public AudioClip collectSound;
-    public AudioSource generatorSounds;
+    public AudioSource fuelSounds;
     
     public TextMeshProUGUI fuelCount;
 
@@ -41,7 +41,7 @@ public class GeneratorManager : MonoBehaviour
         {
             other.gameObject.SetActive(false);
 
-            generatorSounds.PlayOneShot(collectSound);
+            fuelSounds.PlayOneShot(collectSound);
 
             timeLeft += 10;
             fuelCount.text = (timeLeft).ToString("0");
