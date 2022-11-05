@@ -20,13 +20,4 @@ public class UpgradeMenu : MonoBehaviour
             Cursor.visible = true;
         }
     }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if(other.gameObject.CompareTag("Upgrade"))
-        {
-            upgradeMenu.SetActive(false);
-        }
-    }
-
 }
