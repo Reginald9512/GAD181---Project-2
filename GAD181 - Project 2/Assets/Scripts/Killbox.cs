@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Killbox : MonoBehaviour
 {
+    public int killboxDamage = 1000;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == ("Player"))
         {
-            Destroy(other);
+            other.gameObject.GetComponent<PlayerHealth>().playerHealth -= killboxDamage;
         }
     }
 }

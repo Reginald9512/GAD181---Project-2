@@ -287,7 +287,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.6
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -655,6 +655,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarbedWireFence_36_v1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -821,6 +825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e83fcc8b30d8a4ea5e24c8e7807828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killboxDamage: 1000
 --- !u!65 &238487725
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -861,7 +866,7 @@ GameObject:
   - component: {fileID: 262378214}
   - component: {fileID: 262378213}
   - component: {fileID: 262378212}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1392,6 +1397,10 @@ PrefabInstance:
     - target: {fileID: 4806931415079242370, guid: f5b099e6487383d4f8661e894b5d3f64, type: 3}
       propertyPath: m_Name
       value: Rock1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806931415079242370, guid: f5b099e6487383d4f8661e894b5d3f64, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4806931415430870042, guid: f5b099e6487383d4f8661e894b5d3f64, type: 3}
       propertyPath: m_RootOrder
@@ -6324,6 +6333,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 457291409}
   m_CullTransparentMesh: 1
+--- !u!1 &627345727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 627345729}
+  - component: {fileID: 627345728}
+  m_Layer: 0
+  m_Name: NavMesh Surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &627345728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627345727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 23800000, guid: 2e04cee083492954b9637b21a6df9262, type: 2}
+--- !u!4 &627345729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627345727}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &630527668
 GameObject:
   m_ObjectHideFlags: 0
@@ -6367,6 +6437,10 @@ PrefabInstance:
     - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_Name
       value: BarbedWireFence_36_v1 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_RootOrder
@@ -6692,6 +6766,124 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701748191}
   m_CullTransparentMesh: 1
+--- !u!1001 &712065967
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4829844354256785042, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
+      propertyPath: m_Name
+      value: Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829844354256785053, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829844354256785053, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.2181344
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829844354256785053, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829844354256785053, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.5642824
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829844354256785053, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829844354256785053, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829844354256785053, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829844354256785053, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829844354256785053, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829844354256785053, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829844354256785053, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4829844354256785041, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
+    - {fileID: 4829844354256785051, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
+    - {fileID: 4829844354256785040, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
+--- !u!1 &712065968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4829844354256785042, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
+  m_PrefabInstance: {fileID: 712065967}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &712065969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712065968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b8993d87f17604b814456b04e4b808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 712065970}
+  player: {fileID: 375731953604772715}
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 128
+  health: 100
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 5
+  timeBetweenAttacks: 1
+  projectile: {fileID: 613610069887075910, guid: 0e7f4d67827c18c468a068c6a2e34cd1, type: 3}
+  sightRange: 20
+  attackRange: 12
+  playerInSightRange: 0
+  playerInAttackRange: 0
+--- !u!195 &712065970
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712065968}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 20
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &719588955
 GameObject:
   m_ObjectHideFlags: 0
@@ -6930,7 +7122,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 733605908}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bunker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7261,6 +7453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarbedWireFence_36_v1 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -7590,6 +7786,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarbedWireFence_36_v1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -7668,7 +7868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOver: {fileID: 1557023365}
   collectSound: {fileID: 8300000, guid: 8581816faa3dfc142824f2347ec104c4, type: 3}
-  generatorSounds: {fileID: 1172680044}
+  fuelSounds: {fileID: 0}
   fuelCount: {fileID: 2106293076}
   timeLeft: 100
 --- !u!1 &949403159
@@ -7680,7 +7880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 949403160}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fences
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7911,7 +8111,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1046254493
 Transform:
   m_ObjectHideFlags: 0
@@ -7942,6 +8142,10 @@ PrefabInstance:
     - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_Name
       value: BarbedWireFence_36_v1 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_RootOrder
@@ -8174,6 +8378,10 @@ PrefabInstance:
     - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_Name
       value: BarbedWireFence_36_v1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_RootOrder
@@ -8532,6 +8740,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock2
       objectReference: {fileID: 0}
+    - target: {fileID: 4806931415079242370, guid: f5b099e6487383d4f8661e894b5d3f64, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4806931415430870042, guid: f5b099e6487383d4f8661e894b5d3f64, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -8659,6 +8871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoneBarricade
       objectReference: {fileID: 0}
+    - target: {fileID: 6964103292492116413, guid: ce48558ac6f7fbb498a1a5a73755bc9b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ce48558ac6f7fbb498a1a5a73755bc9b, type: 3}
@@ -8678,6 +8894,10 @@ PrefabInstance:
     - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_Name
       value: BarbedWireFence_36_v1 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_RootOrder
@@ -8965,7 +9185,7 @@ GameObject:
   - component: {fileID: 1285984978}
   - component: {fileID: 1285984977}
   - component: {fileID: 1285984976}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wal 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9062,7 +9282,7 @@ GameObject:
   - component: {fileID: 1336389668}
   - component: {fileID: 1336389667}
   - component: {fileID: 1336389666}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9700,7 +9920,7 @@ GameObject:
   - component: {fileID: 1511581009}
   - component: {fileID: 1511581008}
   - component: {fileID: 1511581007}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9842,6 +10062,10 @@ PrefabInstance:
     - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_Name
       value: BarbedWireFence_36_v1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_RootOrder
@@ -10245,6 +10469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarbedWireFence_36_v1 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -10402,6 +10630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarbedWireFence_36_v1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -10478,7 +10710,7 @@ GameObject:
   - component: {fileID: 1730194300}
   - component: {fileID: 1730194299}
   - component: {fileID: 1730194298}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15750,6 +15982,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarbedWireFence_36_v1
       objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -15983,6 +16219,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarbedWireFence_36_v1 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -16058,6 +16298,10 @@ PrefabInstance:
     - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_Name
       value: BarbedWireFence_36_v1 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_RootOrder
@@ -16135,7 +16379,7 @@ GameObject:
   - component: {fileID: 2021443743}
   - component: {fileID: 2021443742}
   - component: {fileID: 2021443741}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16231,6 +16475,10 @@ PrefabInstance:
     - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_Name
       value: BarbedWireFence_36_v1 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_RootOrder
@@ -16673,7 +16921,7 @@ GameObject:
   - component: {fileID: 2068528083}
   - component: {fileID: 2068528082}
   - component: {fileID: 2068528081}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26968,7 +27216,7 @@ GameObject:
   - component: {fileID: 375731953186343074}
   - component: {fileID: 375731953186343075}
   - component: {fileID: 375731953186343072}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26992,7 +27240,7 @@ GameObject:
   - component: {fileID: 375731953604772717}
   - component: {fileID: 938691889}
   - component: {fileID: 375731953604772718}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -27123,6 +27371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 100
+  gameOver: {fileID: 0}
   healthIndicator: 0
   totalPlayerhealth: {fileID: 25772013332585897}
 --- !u!114 &375731953604772718
@@ -27139,6 +27388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 758919162}
   controlsPanel: {fileID: 1904355301}
+  upgradesPanel: {fileID: 0}
 --- !u!1 &375731953611742185
 GameObject:
   m_ObjectHideFlags: 0
@@ -27150,7 +27400,7 @@ GameObject:
   - component: {fileID: 375731953611900873}
   - component: {fileID: 375731953614800873}
   - component: {fileID: 375731953613669673}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GunLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27231,7 +27481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 375731954578366531}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model Details
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27264,7 +27514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 375731954917024079}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Muzzle Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27296,7 +27546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 375731954971155693}
   - component: {fileID: 375731954971155692}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27362,7 +27612,7 @@ GameObject:
   - component: {fileID: 375731955251008634}
   - component: {fileID: 375731955251008635}
   - component: {fileID: 375731955251008636}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -27511,7 +27761,7 @@ GameObject:
   - component: {fileID: 375731955256588296}
   - component: {fileID: 375731955256588297}
   - component: {fileID: 375731955256588790}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27559,7 +27809,7 @@ GameObject:
   - component: {fileID: 4222815408209395634}
   - component: {fileID: 2125280610221886328}
   - component: {fileID: 774362768751581741}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Large Log Pile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27751,7 +28001,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1937560350594890209}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27802,7 +28052,7 @@ GameObject:
   - component: {fileID: 543450652696828223}
   - component: {fileID: 3469287836614514330}
   - component: {fileID: 1711813856108290640}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27866,7 +28116,7 @@ GameObject:
   - component: {fileID: 1062357037489180844}
   - component: {fileID: 1062357037496548780}
   - component: {fileID: 1164008159412986955}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tree07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28041,7 +28291,7 @@ GameObject:
   - component: {fileID: 1157578826021495593}
   - component: {fileID: 1157578826016198185}
   - component: {fileID: 1047553754999297998}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tree07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28161,7 +28411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 309995245276056164}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28278,7 +28528,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8046920289471374411}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tree1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28381,7 +28631,7 @@ GameObject:
   - component: {fileID: 7841547593019191069}
   - component: {fileID: 5419574953369050071}
   - component: {fileID: 6699006680223873710}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wooden Wire Barrier 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28400,7 +28650,7 @@ GameObject:
   - component: {fileID: 7841547592128955686}
   - component: {fileID: 5419574954359943660}
   - component: {fileID: 6699006681514676373}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wooden Wire Barrier 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28493,7 +28743,7 @@ GameObject:
   - component: {fileID: 6759578551293689994}
   - component: {fileID: 6759578551298960778}
   - component: {fileID: 3006860022118076055}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tree06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
