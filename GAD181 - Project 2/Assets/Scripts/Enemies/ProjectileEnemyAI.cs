@@ -8,7 +8,7 @@ public class ProjectileEnemyAI : MonoBehaviour
     public NavMeshAgent agent;
     public Transform player;
     public LayerMask whatIsPlayer, whatIsGround;
-    public float health = 100f;
+    public int health = 100;
 
     //patroling
     public Vector3 walkPoint;

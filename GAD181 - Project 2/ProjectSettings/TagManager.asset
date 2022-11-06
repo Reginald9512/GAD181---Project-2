@@ -7,6 +7,7 @@ TagManager:
   - Fuel
   - Enemy
   - MenuMusic
+  - Upgrade
   layers:
   - Default
   - TransparentFX
@@ -16,9 +17,9 @@ TagManager:
   - UI
   - Player
   - Ground
-  - 
-  - 
-  - 
+  - Enemy
+  - Character
+  - Character Collision
   - 
   - 
   - 
