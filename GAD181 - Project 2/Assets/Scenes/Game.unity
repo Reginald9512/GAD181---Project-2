@@ -31974,7 +31974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivity: 0.5
-  speed: 0.012
+  speed: 6
 --- !u!4 &375731953604772715
 Transform:
   m_ObjectHideFlags: 0
