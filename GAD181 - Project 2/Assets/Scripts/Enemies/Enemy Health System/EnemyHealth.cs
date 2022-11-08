@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -11,9 +12,13 @@ public class EnemyHealth : MonoBehaviour
     public Transform enemyTransform;
     public GameObject healthPickupPrefab;
 
+    public TextMeshProUGUI coinCount;
+    private int coinScore = 0;
+
     private void Start()
     {
         enemyHealth = enemyHealthMax;
+        coinScore = 0;
     }
 
     private void Update()
@@ -25,15 +30,18 @@ public class EnemyHealth : MonoBehaviour
 
         if (enemyHealth <= 0)
         {
+            coinScore += 10;
+            coinCount.text = (coinScore).ToString();
+
             Destroy(gameObject);
             SpawnHealthPickup();
-        }
-
-        
+        }   
     }
+
     private void SpawnHealthPickup()
     {
         GameObject healthPickup = Instantiate(healthPickupPrefab) as GameObject;
         healthPickup.transform.position = enemyTransform.position;
     }
+
 }
