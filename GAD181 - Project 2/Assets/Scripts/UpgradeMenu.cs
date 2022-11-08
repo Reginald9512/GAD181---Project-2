@@ -1,23 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UpgradeMenu : MonoBehaviour
 {
     public GameObject upgradeMenu;
 
-    public void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Upgrade"))
+        if (other.CompareTag("Player"))
         {
-            upgradeMenu.SetActive(true);
-
-            GetComponent<PlayerController>().enabled = false;
-            GetComponent<PauseMenu>().enabled = false;
-            GetComponentInChildren<PlayerPrimaryGun>().enabled = false;
-
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                upgradeMenu.SetActive(true);
+                Debug.Log("E Key Was Pressed");
+            }
         }
     }
 }

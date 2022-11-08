@@ -7975,6 +7975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 578150164}
   - component: {fileID: 578150165}
+  - component: {fileID: 578150166}
   m_Layer: 0
   m_Name: TriggerCollider
   m_TagString: Upgrade
@@ -8005,11 +8006,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 578150163}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.9014983, y: 2.6529686, z: 2.0040536}
   m_Center: {x: -0.30299968, y: 0.4994881, z: 0.40476447}
+--- !u!114 &578150166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578150163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6c3561508894242959e956aa3989f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeMenu: {fileID: 912936132}
 --- !u!1 &627345727
 GameObject:
   m_ObjectHideFlags: 0
@@ -14953,6 +14967,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774060627}
   m_CullTransparentMesh: 1
+--- !u!1 &1781091667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1781091668}
+  m_Layer: 0
+  m_Name: MeasuringStick
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1781091668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781091667}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23.41, y: 2.86128, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1784230897
 GameObject:
   m_ObjectHideFlags: 0
@@ -22665,7 +22710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375731953604772692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.56, y: 1.15, z: -14.77}
+  m_LocalPosition: {x: -16.431, y: 1.17, z: -14.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22705,7 +22750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 758919162}
   controlsPanel: {fileID: 1904355301}
-  upgradesPanel: {fileID: 912936132}
+  upgradeMenu: {fileID: 912936132}
 --- !u!136 &375731953604772719
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -22975,7 +23020,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 26.991467
+  field of view: 30
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -23222,7 +23267,7 @@ GameObject:
   - component: {fileID: 3469287838488624256}
   m_Layer: 0
   m_Name: CraftingTable
-  m_TagString: Untagged
+  m_TagString: Upgrade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

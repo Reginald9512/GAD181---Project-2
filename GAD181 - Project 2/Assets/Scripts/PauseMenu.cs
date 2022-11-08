@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
@@ -10,7 +11,7 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject controlsPanel;
-    public GameObject upgradesPanel;
+    public GameObject upgradeMenu;
 
     private void Update()
     {
@@ -24,21 +25,6 @@ public class PauseMenu : MonoBehaviour
             {
                 Pause();
             }
-        }
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Upgrade"))
-        {
-            upgradesPanel.SetActive(true);
-
-            GetComponent<PlayerController>().enabled = false;
-            GetComponent<PauseMenu>().enabled = false;
-            GetComponentInChildren<PlayerPrimaryGun>().enabled = false;
-
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
         }
     }
 
@@ -98,7 +84,7 @@ public class PauseMenu : MonoBehaviour
 
     public void CloseUpgrades()
     {
-        upgradesPanel.SetActive(false);
+        upgradeMenu.SetActive(false);
 
         GetComponent<PlayerController>().enabled = true;
         GetComponent<PauseMenu>().enabled = true;

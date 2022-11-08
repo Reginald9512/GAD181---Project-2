@@ -11,7 +11,7 @@ public class CoinSpawner : MonoBehaviour
     void Start()
     {
         ///timer set random between 4.0f and 9.0f///
-        SpawningTime = Random.Range(4.0f, 9.0f);
+        SpawningTime = Random.Range(5.0f, 10.0f);
     }
 
     ///Depending on pickObject number an object is spawned///
@@ -19,22 +19,22 @@ public class CoinSpawner : MonoBehaviour
     {
         if (pickObject == 1)
         {
-            Instantiate(ToSpawn1, new Vector3(Random.Range(0f, -22f), Random.Range(0.5f, 0.5f), Random.Range(10f, -22f)), Quaternion.identity);
+            Instantiate(ToSpawn1, new Vector3(Random.Range(0f, -23f), Random.Range(0.5f, 0.5f), Random.Range(0f, -16f)), Quaternion.identity);
 
         }
         if (pickObject == 2)
         {
-            Instantiate(ToSpawn2, new Vector3(Random.Range(0f, -22f), Random.Range(0.5f, 0.5f), Random.Range(10f, -22f)), Quaternion.identity);
+            Instantiate(ToSpawn2, new Vector3(Random.Range(0f, -23f), Random.Range(0.5f, 0.5f), Random.Range(0f, -16f)), Quaternion.identity);
 
         }
         if (pickObject == 3)
         {
-            Instantiate(ToSpawn3, new Vector3(Random.Range(0f, -22f), Random.Range(0.5f, 0.5f), Random.Range(10f, -22f)), Quaternion.identity);
+            Instantiate(ToSpawn3, new Vector3(Random.Range(0f, -23f), Random.Range(0.5f, 0.5f), Random.Range(0f, -16f)), Quaternion.identity);
 
         }
         if (pickObject == 4)
         {
-            Instantiate(ToSpawn4, new Vector3(Random.Range(0f, -22f), Random.Range(0.5f, 0.5f), Random.Range(10f, -22f)), Quaternion.identity);
+            Instantiate(ToSpawn4, new Vector3(Random.Range(0f, -23f), Random.Range(0.5f, 0.5f), Random.Range(0f, -16f)), Quaternion.identity);
 
         }
     }
@@ -48,7 +48,7 @@ public class CoinSpawner : MonoBehaviour
         {
             pickObject = Random.Range(1, 5);
             SpawnNow();
-            SpawningTime = Random.Range(4.0f, 9.0f);
+            SpawningTime = Random.Range(5.0f, 10.0f);
         }
     }
 }
