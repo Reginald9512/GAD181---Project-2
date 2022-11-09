@@ -13,6 +13,7 @@ public class EnemyMovement : MonoBehaviour
     public float timeBetweenAttacks;
     private bool alreadyAttacked;
     public GameObject projectile;
+    public float projectileSpeed;
 
     //attack range
     public float attackRange;
@@ -30,7 +31,7 @@ public class EnemyMovement : MonoBehaviour
         if (!alreadyAttacked && Vector3.Distance(Player.position,transform.position) <= attackRange)
         {
             Rigidbody rb = Instantiate(projectile, shootPoint.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 4f, ForceMode.Impulse);
+            rb.AddForce(transform.forward * projectileSpeed, ForceMode.Impulse);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
