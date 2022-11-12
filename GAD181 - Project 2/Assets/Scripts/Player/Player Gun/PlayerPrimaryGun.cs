@@ -9,6 +9,10 @@ public class PlayerPrimaryGun : MonoBehaviour
     public AudioClip gunFire;
     public AudioSource gunSounds;
 
+    public GameObject reloadButton1;
+    public GameObject reloadButton2;
+    public GameObject reloadButton3;
+
     //weapon stats
     public int weaponDamage, magazineCapacity, bulletsPerPress;
     public float range, spread, reloadTime, timeBetweenShooting, timeBetweenBurst;
@@ -108,5 +112,23 @@ public class PlayerPrimaryGun : MonoBehaviour
     {
         bulletsLeft = magazineCapacity;
         reloading = false;
+    }
+
+
+    //UPGRADE SYSTEM BELOW
+
+    public void FasterReload1()
+    {
+        reloadTime = 2.0f;
+
+        reloadButton1.SetActive(false);
+        reloadButton2.SetActive(true);
+    }
+    public void FasterReload2()
+    {
+        reloadTime = 1.5f;
+
+        reloadButton2.SetActive(false);
+        reloadButton3.SetActive(true);
     }
 }

@@ -18,7 +18,7 @@ public class GeneratorManager : MonoBehaviour
     {
         timeLeft -= Time.deltaTime;
 
-        fuelCount.text = (timeLeft).ToString("0");
+        
 
         if (timeLeft <= 0)
         {
