@@ -9,9 +9,13 @@ public class PlayerPrimaryGun : MonoBehaviour
     public AudioClip gunFire;
     public AudioSource gunSounds;
 
+    //Upgrade Buttons
     public GameObject reloadButton1;
     public GameObject reloadButton2;
     public GameObject reloadButton3;
+    public GameObject damagebutton1;
+    public GameObject damagebutton2;
+    public GameObject damagebutton3;
 
     //weapon stats
     public int weaponDamage, magazineCapacity, bulletsPerPress;
@@ -130,5 +134,20 @@ public class PlayerPrimaryGun : MonoBehaviour
 
         reloadButton2.SetActive(false);
         reloadButton3.SetActive(true);
+    }
+
+    public void moreDamage1()
+    {
+        weaponDamage = 35;
+
+        damagebutton1.SetActive(false);
+        damagebutton2.SetActive(true);
+    }
+    public void moreDamage2()
+    {
+        weaponDamage = 50;
+
+        damagebutton2.SetActive(false);
+        damagebutton3.SetActive(true);
     }
 }
