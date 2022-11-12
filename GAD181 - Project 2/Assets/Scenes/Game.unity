@@ -46096,7 +46096,7 @@ MonoBehaviour:
   reloadSound: {fileID: 8300000, guid: 40433ed04cdda114192745c1814ba656, type: 3}
   gunFire: {fileID: 8300000, guid: 4096e4086b5651e40881470c8e386249, type: 3}
   gunEmpty: {fileID: 8300000, guid: e7632c6401c09437e83de45d33c5858e, type: 3}
-  gunUpgrade: {fileID: 8300000, guid: 89bf461b178487c4e89fcf953345d9e3, type: 3}
+  gunUpgrade: {fileID: 0}
   gunSounds: {fileID: 4921255}
   coinCount: {fileID: 37109862}
   coinScoreNumber: 0
