@@ -7,7 +7,11 @@ public class PlayerPrimaryGun : MonoBehaviour
 {
     public AudioClip reloadSound;
     public AudioClip gunFire;
+    public AudioClip gunEmpty;
     public AudioSource gunSounds;
+
+    public TextMeshProUGUI coinCount;
+    public int coinScoreNumber;
 
     //Upgrade Buttons
     public GameObject reloadButton1;
@@ -75,6 +79,12 @@ public class PlayerPrimaryGun : MonoBehaviour
 
             gunSounds.PlayOneShot(gunFire);
         }
+        if (readyToShoot && shooting && !reloading && bulletsLeft <= 0)
+        {
+            bulletsShot = bulletsPerPress;
+
+            gunSounds.PlayOneShot(gunEmpty);
+        }
     }
 
     private void Shoot()
@@ -126,48 +136,84 @@ public class PlayerPrimaryGun : MonoBehaviour
     //Reload Upgrade
     public void FasterReload1()
     {
-        reloadTime = 2.0f;
+        if(gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber >= 100)
+        {
+            reloadTime = 2.0f;
 
-        reloadButton1.SetActive(false);
-        reloadButton2.SetActive(true);
+            reloadButton1.SetActive(false);
+            reloadButton2.SetActive(true);
+
+            gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 100;
+            coinCount.text = coinScoreNumber.ToString();
+        }
     }
     public void FasterReload2()
     {
-        reloadTime = 1.5f;
+        if (gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber >= 200)
+        {
+            reloadTime = 1.5f;
 
-        reloadButton2.SetActive(false);
-        reloadButton3.SetActive(true);
+            reloadButton2.SetActive(false);
+            reloadButton3.SetActive(true);
+
+            gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 200;
+            coinCount.text = coinScoreNumber.ToString();
+        }
     }
 
     //Damage Upgrade
     public void moreDamage1()
     {
-        weaponDamage = 35;
+        if (gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber >= 200)
+        {
+            weaponDamage = 35;
 
-        damageButton1.SetActive(false);
-        damageButton2.SetActive(true);
+            damageButton1.SetActive(false);
+            damageButton2.SetActive(true);
+
+            gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 200;
+            coinCount.text = coinScoreNumber.ToString();
+        }
     }
     public void moreDamage2()
     {
-        weaponDamage = 50;
+        if (gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber >= 500)
+        {
+            weaponDamage = 50;
 
-        damageButton2.SetActive(false);
-        damageButton3.SetActive(true);
+            damageButton2.SetActive(false);
+            damageButton3.SetActive(true);
+
+            gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 500;
+            coinCount.text = coinScoreNumber.ToString();
+        }
     }
 
     //Ammo Upgrade
     public void moreAmmo1()
     {
-        magazineCapacity = 15;
+        if (gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber >= 150)
+        {
+            magazineCapacity = 15;
 
-        ammoButton1.SetActive(false);
-        ammoButton2.SetActive(true);
+            ammoButton1.SetActive(false);
+            ammoButton2.SetActive(true);
+
+            gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 150;
+            coinCount.text = coinScoreNumber.ToString();
+        }
     }
     public void moreAmmo2()
     {
-        magazineCapacity = 20;
+        if (gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber >= 300)
+        {
+            magazineCapacity = 20;
 
-        ammoButton2.SetActive(false);
-        ammoButton3.SetActive(true);
+            ammoButton2.SetActive(false);
+            ammoButton3.SetActive(true);
+
+            gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 300;
+            coinCount.text = coinScoreNumber.ToString();
+        }
     }
 }

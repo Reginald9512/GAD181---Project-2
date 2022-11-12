@@ -8,10 +8,21 @@ public class CoinCollector : MonoBehaviour
     public TextMeshProUGUI coinCount;
     public int coinScoreNumber;
 
+    public AudioSource coinSoundManager;
+    public AudioClip coinCollect;
+
     private void Start()
     {
         coinScoreNumber = 0;
         coinCount.text = coinScoreNumber.ToString();
+    }
+
+    private void Update()
+    {
+        if(coinScoreNumber <= 0)
+        {
+            coinScoreNumber = 0;
+        }
     }
 
     public void OnTriggerEnter(Collider other)
@@ -20,7 +31,9 @@ public class CoinCollector : MonoBehaviour
         {
             other.gameObject.SetActive(false);
 
-            coinScoreNumber += 10;
+            coinSoundManager.PlayOneShot(coinCollect);
+
+            coinScoreNumber += 25;
             coinCount.text = coinScoreNumber.ToString();
         }
     }

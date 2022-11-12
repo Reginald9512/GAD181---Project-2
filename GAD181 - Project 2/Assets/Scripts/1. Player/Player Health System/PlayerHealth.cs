@@ -9,6 +9,9 @@ public class PlayerHealth : MonoBehaviour
     public GameObject healthButton2;
     public GameObject healthButton3;
 
+    public TextMeshProUGUI coinCount;
+    public int coinScoreNumber;
+
     public int playerHealth;
     private int playerHealthMax = 100;
 
@@ -49,18 +52,30 @@ public class PlayerHealth : MonoBehaviour
     //Health Upgrade
     public void MoreHealth1()
     {
-        playerHealthMax = 150;
-        playerHealth = 150;
+        if (gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber >= 200)
+        {
+            playerHealthMax = 150;
+            playerHealth = 150;
 
-        healthButton1.SetActive(false);
-        healthButton2.SetActive(true);
+            healthButton1.SetActive(false);
+            healthButton2.SetActive(true);
+
+            gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 200;
+            coinCount.text = coinScoreNumber.ToString();
+        }
     }
     public void MoreHealth2()
     {
-        playerHealthMax = 200;
-        playerHealth = 200;
+        if (gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber >= 400)
+        {
+            playerHealthMax = 200;
+            playerHealth = 200;
 
-        healthButton2.SetActive(false);
-        healthButton3.SetActive(true);
+            healthButton2.SetActive(false);
+            healthButton3.SetActive(true);
+
+            gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 400;
+            coinCount.text = coinScoreNumber.ToString();
+        }       
     }
 }

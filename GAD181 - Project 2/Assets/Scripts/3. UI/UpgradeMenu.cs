@@ -10,18 +10,23 @@ public class UpgradeMenu : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        openUpgradesButton.SetActive(true);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            openUpgradesButton.SetActive(true);
 
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+        }
     }
-
     private void OnTriggerExit(Collider other)
     {
-        openUpgradesButton.SetActive(false);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            openUpgradesButton.SetActive(false);
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 
     public void OpenUpgradeMenu()
