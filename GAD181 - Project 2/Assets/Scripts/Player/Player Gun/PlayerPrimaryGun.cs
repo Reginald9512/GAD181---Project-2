@@ -13,9 +13,12 @@ public class PlayerPrimaryGun : MonoBehaviour
     public GameObject reloadButton1;
     public GameObject reloadButton2;
     public GameObject reloadButton3;
-    public GameObject damagebutton1;
-    public GameObject damagebutton2;
-    public GameObject damagebutton3;
+    public GameObject damageButton1;
+    public GameObject damageButton2;
+    public GameObject damageButton3;
+    public GameObject ammoButton1;
+    public GameObject ammoButton2;
+    public GameObject ammoButton3;
 
     //weapon stats
     public int weaponDamage, magazineCapacity, bulletsPerPress;
@@ -120,7 +123,7 @@ public class PlayerPrimaryGun : MonoBehaviour
 
 
     //UPGRADE SYSTEM BELOW
-
+    //Reload Upgrade
     public void FasterReload1()
     {
         reloadTime = 2.0f;
@@ -136,18 +139,35 @@ public class PlayerPrimaryGun : MonoBehaviour
         reloadButton3.SetActive(true);
     }
 
+    //Damage Upgrade
     public void moreDamage1()
     {
         weaponDamage = 35;
 
-        damagebutton1.SetActive(false);
-        damagebutton2.SetActive(true);
+        damageButton1.SetActive(false);
+        damageButton2.SetActive(true);
     }
     public void moreDamage2()
     {
         weaponDamage = 50;
 
-        damagebutton2.SetActive(false);
-        damagebutton3.SetActive(true);
+        damageButton2.SetActive(false);
+        damageButton3.SetActive(true);
+    }
+
+    //Ammo Upgrade
+    public void moreAmmo1()
+    {
+        magazineCapacity = 15;
+
+        ammoButton1.SetActive(false);
+        ammoButton2.SetActive(true);
+    }
+    public void moreAmmo2()
+    {
+        magazineCapacity = 20;
+
+        ammoButton2.SetActive(false);
+        ammoButton3.SetActive(true);
     }
 }
