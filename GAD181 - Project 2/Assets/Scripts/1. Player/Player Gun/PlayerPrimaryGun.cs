@@ -8,6 +8,7 @@ public class PlayerPrimaryGun : MonoBehaviour
     public AudioClip reloadSound;
     public AudioClip gunFire;
     public AudioClip gunEmpty;
+    public AudioClip gunUpgrade;
     public AudioSource gunSounds;
 
     public TextMeshProUGUI coinCount;
@@ -145,6 +146,8 @@ public class PlayerPrimaryGun : MonoBehaviour
 
             gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 100;
             coinCount.text = coinScoreNumber.ToString();
+
+            gunSounds.PlayOneShot(gunUpgrade);
         }
     }
     public void FasterReload2()
@@ -158,6 +161,8 @@ public class PlayerPrimaryGun : MonoBehaviour
 
             gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 200;
             coinCount.text = coinScoreNumber.ToString();
+
+            gunSounds.PlayOneShot(gunUpgrade);
         }
     }
 
@@ -173,6 +178,8 @@ public class PlayerPrimaryGun : MonoBehaviour
 
             gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 200;
             coinCount.text = coinScoreNumber.ToString();
+
+            gunSounds.PlayOneShot(gunUpgrade);
         }
     }
     public void moreDamage2()
@@ -186,6 +193,8 @@ public class PlayerPrimaryGun : MonoBehaviour
 
             gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 500;
             coinCount.text = coinScoreNumber.ToString();
+
+            gunSounds.PlayOneShot(gunUpgrade);
         }
     }
 
@@ -201,6 +210,8 @@ public class PlayerPrimaryGun : MonoBehaviour
 
             gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 150;
             coinCount.text = coinScoreNumber.ToString();
+
+            gunSounds.PlayOneShot(gunUpgrade);
         }
     }
     public void moreAmmo2()
@@ -214,6 +225,8 @@ public class PlayerPrimaryGun : MonoBehaviour
 
             gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 300;
             coinCount.text = coinScoreNumber.ToString();
+
+            gunSounds.PlayOneShot(gunUpgrade);
         }
     }
 }

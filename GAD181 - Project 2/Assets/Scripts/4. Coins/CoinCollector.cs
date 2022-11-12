@@ -33,7 +33,7 @@ public class CoinCollector : MonoBehaviour
 
             coinSoundManager.PlayOneShot(coinCollect);
 
-            coinScoreNumber += 25;
+            coinScoreNumber += 50;
             coinCount.text = coinScoreNumber.ToString();
         }
     }

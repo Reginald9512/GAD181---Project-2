@@ -12,6 +12,9 @@ public class PlayerHealth : MonoBehaviour
     public TextMeshProUGUI coinCount;
     public int coinScoreNumber;
 
+    public AudioSource buttonSoundManager;
+    public AudioClip healthSound;
+
     public int playerHealth;
     private int playerHealthMax = 100;
 
@@ -54,6 +57,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if (gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber >= 200)
         {
+            buttonSoundManager.PlayOneShot(healthSound);
+
             playerHealthMax = 150;
             playerHealth = 150;
 
@@ -68,6 +73,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if (gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber >= 400)
         {
+            buttonSoundManager.PlayOneShot(healthSound);
+
             playerHealthMax = 200;
             playerHealth = 200;
 
