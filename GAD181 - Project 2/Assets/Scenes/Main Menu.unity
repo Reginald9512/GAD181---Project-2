@@ -1683,7 +1683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioManager: {fileID: 0}
-  buttonPress: {fileID: 0}
+  buttonPress: {fileID: 8300000, guid: dc68c3ec02c08364a8f7c89c9e46d5b1, type: 3}
 --- !u!1 &2074841061
 GameObject:
   m_ObjectHideFlags: 0
