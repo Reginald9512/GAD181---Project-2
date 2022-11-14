@@ -8,12 +8,20 @@ public class EnemySpawner : MonoBehaviour
     private GameObject enemy;
     public Vector3 spawner;
 
+    public float respawnTime = 5;
+    private float nextRespawnTime;
+
     void Update()
     {
         if (enemy == null)
         {
-            enemy = Instantiate(enemyPrefab) as GameObject;
-            enemy.transform.position = spawner;
+            if (Time.time > nextRespawnTime)
+            {
+                nextRespawnTime = Time.time + respawnTime;
+
+                enemy = Instantiate(enemyPrefab) as GameObject;
+                enemy.transform.position = spawner;
+            }
         }
     }
 }

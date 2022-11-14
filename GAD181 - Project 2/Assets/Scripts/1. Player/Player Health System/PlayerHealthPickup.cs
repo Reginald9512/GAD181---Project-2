@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class PlayerHealthPickup : MonoBehaviour
 {
-    public int healthIncrease = 5;
-    //public delegate void PlayerHealthIncreaseAction();
-    //public static event PlayerHealthIncreaseAction PlayerHealthIncrease;
+    public int healthIncrease = 15;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,12 +14,4 @@ public class PlayerHealthPickup : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    //public void PlayerHealthIncreaseEvent()
-    //{
-        //gameObject.GetComponent<PlayerHealth>().playerHealth += healthIncrease;
-    //}
-}     
-
-//
-//collision.gameObject PlayerHealthIncrease();        
+}
