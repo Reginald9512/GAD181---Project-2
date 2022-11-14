@@ -19,10 +19,7 @@ public class CoinCollector : MonoBehaviour
 
     private void Update()
     {
-        if(coinScoreNumber <= 0)
-        {
-            coinScoreNumber = 0;
-        }
+        coinCount.text = coinScoreNumber.ToString();
     }
 
     public void OnTriggerEnter(Collider other)

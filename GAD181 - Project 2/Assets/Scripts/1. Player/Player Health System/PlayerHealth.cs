@@ -55,7 +55,7 @@ public class PlayerHealth : MonoBehaviour
     //Health Upgrade
     public void MoreHealth1()
     {
-        if (gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber >= 200)
+        if (gameObject.GetComponent<CoinCollector>().coinScoreNumber >= 200)
         {
             buttonSoundManager.PlayOneShot(healthSound);
 
@@ -65,13 +65,12 @@ public class PlayerHealth : MonoBehaviour
             healthButton1.SetActive(false);
             healthButton2.SetActive(true);
 
-            gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 200;
-            coinCount.text = coinScoreNumber.ToString();
+            gameObject.GetComponent<CoinCollector>().coinScoreNumber -= 200;
         }
     }
     public void MoreHealth2()
     {
-        if (gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber >= 400)
+        if (gameObject.GetComponent<CoinCollector>().coinScoreNumber >= 400)
         {
             buttonSoundManager.PlayOneShot(healthSound);
 
@@ -81,8 +80,7 @@ public class PlayerHealth : MonoBehaviour
             healthButton2.SetActive(false);
             healthButton3.SetActive(true);
 
-            gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 400;
-            coinCount.text = coinScoreNumber.ToString();
+            gameObject.GetComponent<CoinCollector>().coinScoreNumber -= 400;
         }       
     }
 }

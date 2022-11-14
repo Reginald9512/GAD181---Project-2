@@ -52,6 +52,11 @@ public class PlayerPrimaryGun : MonoBehaviour
     {
         MyInput();
         ammunitionCounter.SetText(bulletsLeft + " | " + magazineCapacity);
+
+        if (gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber <= 0)
+        {
+            gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber = 0;
+        }
     }
 
     private void MyInput()
@@ -145,7 +150,6 @@ public class PlayerPrimaryGun : MonoBehaviour
             reloadButton2.SetActive(true);
 
             gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 100;
-            coinCount.text = coinScoreNumber.ToString();
 
             gunSounds.PlayOneShot(gunUpgrade);
         }
@@ -160,7 +164,6 @@ public class PlayerPrimaryGun : MonoBehaviour
             reloadButton3.SetActive(true);
 
             gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 200;
-            coinCount.text = coinScoreNumber.ToString();
 
             gunSounds.PlayOneShot(gunUpgrade);
         }
@@ -177,7 +180,6 @@ public class PlayerPrimaryGun : MonoBehaviour
             damageButton2.SetActive(true);
 
             gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 200;
-            coinCount.text = coinScoreNumber.ToString();
 
             gunSounds.PlayOneShot(gunUpgrade);
         }
@@ -192,7 +194,6 @@ public class PlayerPrimaryGun : MonoBehaviour
             damageButton3.SetActive(true);
 
             gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 500;
-            coinCount.text = coinScoreNumber.ToString();
 
             gunSounds.PlayOneShot(gunUpgrade);
         }
@@ -209,7 +210,6 @@ public class PlayerPrimaryGun : MonoBehaviour
             ammoButton2.SetActive(true);
 
             gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 150;
-            coinCount.text = coinScoreNumber.ToString();
 
             gunSounds.PlayOneShot(gunUpgrade);
         }
@@ -224,7 +224,6 @@ public class PlayerPrimaryGun : MonoBehaviour
             ammoButton3.SetActive(true);
 
             gameObject.GetComponentInParent<CoinCollector>().coinScoreNumber -= 300;
-            coinCount.text = coinScoreNumber.ToString();
 
             gunSounds.PlayOneShot(gunUpgrade);
         }

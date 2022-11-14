@@ -11,11 +11,9 @@ public class CoinSpawner : MonoBehaviour
 
     void Start()
     {
-        ///timer set random between 4.0f and 9.0f///
         SpawningTime = Random.Range(5.0f, 10.0f);
     }
 
-    ///Depending on pickObject number an object is spawned///
     void SpawnNow()
     {
         if (pickObject == 1)
@@ -40,7 +38,6 @@ public class CoinSpawner : MonoBehaviour
         }
     }
 
-    ///Spawntime runs down to 0 than it sets the pickupObject random between 1 and 4 and calls the spawnNow function. Then it resets the spawntime
     void Update()
     {
         SpawningTime -= Time.deltaTime;
