@@ -2719,7 +2719,7 @@ PrefabInstance:
       objectReference: {fileID: 375731953604772715}
     - target: {fileID: 4829844354256785051, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
       propertyPath: enemySpeed
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4829844354256785051, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
       propertyPath: projectile
@@ -2735,7 +2735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4829844354256785051, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
       propertyPath: projectileSpeed
-      value: 2
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 4829844354256785051, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
       propertyPath: timeBetweenAttacks
@@ -2795,7 +2795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6965236651583499405, guid: 942eb032e1f09d04d802b2239e66434e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.635
+      value: 0.725
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -5034,9 +5034,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163748960}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.125, y: 0.28571427, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 441874634}
@@ -5047,8 +5047,9 @@ Transform:
   - {fileID: 1550929946}
   - {fileID: 1736371300}
   - {fileID: 831543386}
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  - {fileID: 1243206156}
+  m_Father: {fileID: 262378215}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &166618837 stripped
 Transform:
@@ -7679,6 +7680,7 @@ Transform:
   - {fileID: 485382877}
   - {fileID: 59857936}
   - {fileID: 1224841144}
+  - {fileID: 163748961}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13377,7 +13379,7 @@ Transform:
   m_GameObject: {fileID: 441874633}
   m_LocalRotation: {x: -0, y: 0.43735623, z: -0, w: 0.8992884}
   m_LocalPosition: {x: -15.6, y: 1.75, z: 31.46}
-  m_LocalScale: {x: 6.0164, y: 3.5, z: 2.3741}
+  m_LocalScale: {x: 9.748373, y: 3.5, z: 2.3741}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 163748961}
@@ -27072,7 +27074,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901350104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.5, y: 0.5, z: 24}
+  m_LocalPosition: {x: 14.5, y: 0.5, z: 23.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27092,7 +27094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1701148390}
-  spawner: {x: 15.5, y: 0.5, z: 24}
+  spawner: {x: 14.5, y: 0.5, z: 23.5}
   respawnTime: 15
 --- !u!1 &903977219
 GameObject:
@@ -31392,7 +31394,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035868634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.22, y: 0.5, z: 30.65}
+  m_LocalPosition: {x: -22, y: 0.5, z: 29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31412,7 +31414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1701148390}
-  spawner: {x: -21, y: 0.5, z: 33}
+  spawner: {x: -22, y: 0.5, z: 29}
   respawnTime: 15
 --- !u!1001 &1039688615
 PrefabInstance:
@@ -32521,7 +32523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096150481}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20, y: 0.5, z: -35}
+  m_LocalPosition: {x: -12.5, y: 0.5, z: -37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32541,7 +32543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1701148390}
-  spawner: {x: -20, y: 0.5, z: -35}
+  spawner: {x: -12.5, y: 0.5, z: -37}
   respawnTime: 15
 --- !u!4 &1097173276 stripped
 Transform:
@@ -37341,6 +37343,68 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f4b015df0983224c981f94a9d33cab6, type: 3}
+--- !u!1 &1243206155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1243206156}
+  - component: {fileID: 1243206158}
+  - component: {fileID: 1243206157}
+  m_Layer: 0
+  m_Name: Cube (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1243206156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243206155}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.75, z: 0}
+  m_LocalScale: {x: 93.58189, y: 3.5, z: 239.17401}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 163748961}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1243206157
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243206155}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1243206158
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243206155}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1247416313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49559,7 +49623,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738847937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.35, y: 0.5, z: 30.57}
+  m_LocalPosition: {x: -19, y: 0.5, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49579,7 +49643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1701148390}
-  spawner: {x: -17, y: 0.5, z: 31}
+  spawner: {x: -19, y: 0.5, z: 30}
   respawnTime: 15
 --- !u!1001 &1739738417
 PrefabInstance:
